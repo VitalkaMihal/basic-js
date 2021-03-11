@@ -4,7 +4,7 @@ module.exports = function getSeason(date) {
     return 'Unable to determine the time of year!';
    } else {
     
-     if (!(date instanceof Date)){throw new Error();}
+     if (!(date instanceof Date) || date.hasOwnProperty("toString")){throw new Error();}
      
      if (date.getMonth() === 11 || date.getMonth() === 0 || date.getMonth() === 1) {
       
