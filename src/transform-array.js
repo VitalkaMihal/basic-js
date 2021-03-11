@@ -1,13 +1,7 @@
 module.exports = function transform(arr) {
-  if (!(Array.isArray(arr))) {
-    throw new Error();
-  } 
-  
-  let array = [];
-  for (let i = 0; i < arr.length; i++){
-array.push(arr[i]);
-  }
-
+  if (!(Array.isArray(arr))) {    throw new Error();  } 
+    let array = [];
+  for (let i = 0; i < arr.length; i++){array.push(arr[i]);  }
   if (arr.length === 0) {
     return [];
   } else {
@@ -18,7 +12,6 @@ array.push(arr[i]);
         }
           if (array[i + 2] === '--double-prev' || array[i + 2] === '--discard-prev'){
             array.splice(i, 3);
-          
         } else {
           array.splice(i, 2);
         }
